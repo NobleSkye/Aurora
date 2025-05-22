@@ -65,7 +65,9 @@ public class AuroraClient implements ClientModInitializer {
 
     private void registerFeatures() {
         // Register all mod features
-        features.add(new NoClipFeature());
+        NoClipFeature noClip = new NoClipFeature();
+        noClip.setEnabled(true); // Enable NoClip by default
+        features.add(noClip);
         features.add(new FastPlaceFeature());
         features.add(new TinkerToolFeature());
         features.add(new FreezeUpdatesFeature());

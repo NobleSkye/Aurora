@@ -13,14 +13,31 @@ public class NoClipFeature extends AbstractFeature {
     public void onTick() {
         if (isEnabled() && client.player != null) {
             client.player.noClip = true;
+            // Enable creative flight and invulnerability
+            client.player.getAbilities().allowFlying = true;
+            client.player.getAbilities().flying = true;
+            client.player.getAbilities().invulnerable = true;
         }
     }
 
     @Override
     public void setEnabled(boolean enabled) {
         super.setEnabled(enabled);
-        if (!enabled && client.player != null) {
-            client.player.noClip = false;
+        if (client.player != null) {
+            if (enabled) {
+                client.player.noClip = true;
+                client.player.getAbilities().allowFlying = true;
+                client.player.getAbilities().flying = true;
+                client.player.getAbilities().invulnerable = true;
+            } else {
+                client.player.noClip = false;
+                // Only disable flight/invulnerability if not in creative
+                if (!client.player.isCreative()) {
+                    client.player.getAbilities().allowFlying = false;
+                    client.player.getAbilities().flying = false;
+                    client.player.getAbilities().invulnerable = false;
+                }
+            }
         }
     }
 }
