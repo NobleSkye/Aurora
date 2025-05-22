@@ -10,6 +10,6 @@ public class FastPlaceFeature extends AbstractFeature {
     @Override
     public void setEnabled(boolean enabled) {
         super.setEnabled(enabled);
-        MinecraftClientMixin.setFastPlaceEnabled(enabled);
+        com.aurora.client.util.FastPlaceUtil.setFastPlaceEnabled(enabled);
     }
 }

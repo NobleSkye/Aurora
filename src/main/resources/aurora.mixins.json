@@ -7,7 +7,8 @@
     "ClientPlayerEntityMixin",
     "GameRendererMixin",
     "ClientWorldMixin",
-    "MinecraftClientMixin"
+    "MinecraftClientMixin",
+    "OptionsScreenMixin"
   ],
   "injectors": {
     "defaultRequire": 1

@@ -13,6 +13,6 @@ public class FreezeUpdatesFeature extends AbstractFeature {
     @Override
     public void setEnabled(boolean enabled) {
         super.setEnabled(enabled);
-        ClientWorldMixin.setFreezeUpdates(enabled);
+        com.aurora.client.util.FreezeUpdatesUtil.setFreezeUpdatesEnabled(enabled);
     }
 }

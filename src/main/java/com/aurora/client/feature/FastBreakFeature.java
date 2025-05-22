@@ -17,7 +17,9 @@ public class FastBreakFeature extends AbstractFeature {
 
         // If we're breaking a block, attempt to break it instantly
         if (client.interactionManager.isBreakingBlock() && client.crosshairTarget instanceof BlockHitResult hit) {
-            client.interactionManager.breakBlock(hit.getBlockPos());
+            if (hit != null) {
+                client.interactionManager.breakBlock(hit.getBlockPos());
+            }
         }
     }
 }
