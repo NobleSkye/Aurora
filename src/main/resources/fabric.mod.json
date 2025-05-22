@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "aurora",
+  "version": "${version}",
+  "name": "Aurora",
+  "description": "A creative utility mod inspired by Axiom client, providing advanced building and creative mode tools",
+  "authors": [
+    "Aurora Team"
+  ],
+  "contact": {
+    "sources": "https://github.com/AuroraTeam/Aurora"
+  },
+  "license": "MIT",
+  "icon": "assets/aurora/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "com.aurora.client.AuroraClient"
+    ]
+  },
+  "mixins": [
+    "aurora.mixins.json"
+  ],
+  "accessWidener": "aurora.accesswidener",
+  "depends": {
+    "fabricloader": ">=0.15.7",
+    "minecraft": "~1.20.4",
+    "java": ">=17",
+    "fabric-api": "*",
+    "modmenu": "*"
+  }
+}
