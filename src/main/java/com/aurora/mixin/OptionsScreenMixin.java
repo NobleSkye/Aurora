@@ -1,16 +1,7 @@
 package com.aurora.mixin;
 
-import com.aurora.client.gui.AuroraSettingsScreen;
-import net.minecraft.client.MinecraftClient;
-import net.minecraft.client.gui.screen.Screen;
-import net.minecraft.client.gui.screen.option.OptionsScreen;
-import net.minecraft.client.gui.widget.ButtonWidget;
-import net.minecraft.text.Text;
-import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.injection.At;
-import org.spongepowered.asm.mixin.injection.Inject;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-
+// This mixin is temporarily disabled until we implement the Aurora settings screen
+/*
 @Mixin(OptionsScreen.class)
 public abstract class OptionsScreenMixin extends Screen {
     protected OptionsScreenMixin(Text title) { super(title); }
@@ -21,7 +12,10 @@ public abstract class OptionsScreenMixin extends Screen {
         int y = this.height / 6 - 12;
         this.addDrawableChild(ButtonWidget.builder(
             Text.literal("Aurora Settings"),
-            btn -> MinecraftClient.getInstance().setScreen(new AuroraSettingsScreen(this))
+            btn -> {
+                // TODO: Implement Aurora settings screen
+            }
         ).dimensions(x, y, 150, 20).build());
     }
 }
+*/

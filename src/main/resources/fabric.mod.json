@@ -15,7 +15,7 @@
   "environment": "client",
   "entrypoints": {
     "client": [
-      "com.aurora.client.AuroraClient"
+      "com.aurora.AuroraMod"
     ]
   },
   "mixins": [
