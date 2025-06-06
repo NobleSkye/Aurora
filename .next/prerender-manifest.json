@@ -2,6 +2,11 @@
   "version": 4,
   "routes": {
     "/": {
+      "initialHeaders": {
+        "x-nextjs-stale-time": "4294967294",
+        "x-nextjs-prerender": "1",
+        "x-next-cache-tags": "_N_T_/layout,_N_T_/page,_N_T_/"
+      },
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -29,8 +34,8 @@
   "dynamicRoutes": {},
   "notFoundRoutes": [],
   "preview": {
-    "previewModeId": "411429638132b9c79dd96c3b1b20d47a",
-    "previewModeSigningKey": "bd7334060b6b892621fbbdf6d454199c56754e5ffbbb79f9d06a368b7eca7694",
-    "previewModeEncryptionKey": "c49e6b3a3dac5f235c0f14b09759ecfd881c08d090c6c829a1dd1be260491fd2"
+    "previewModeId": "3d8d5a72c64489e27dffaab9279ea2e4",
+    "previewModeSigningKey": "38b7ca5e9305ce84d2345200d2515220b3714a086ba4c29b2a13b391c5e5f951",
+    "previewModeEncryptionKey": "e6ea252e526c641f83e31d0f48f8bc1f08e10f257ca3791072bdbb6c0cb42618"
   }
 }
