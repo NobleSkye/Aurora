@@ -47,13 +47,13 @@ export default function HomePage() {
                   <ExternalLink className="w-4 h-4 ml-2" />
                 </a>
               </Button>
-              <Button
+                <Button
                 size="lg"
                 variant="outline"
-                className="border-purple-400/50 text-purple-200 hover:bg-purple-500/20 hover:text-white hover:border-purple-400"
-              >
+                className="bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-700 hover:to-purple-700 text-white"
+                >
                 View Documentation
-              </Button>
+                </Button>
             </div>
           </div>
         </div>
