@@ -13,7 +13,7 @@ export default function HomePage() {
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
               <div className="w-8 h-8 rounded-lg overflow-hidden">
-                <img src="/aurora.png" alt="Aurora" className="w-full h-full object-cover" />
+                <img src="/auerora.png" alt="Aurora" className="w-full h-full object-cover" />
               </div>
               <h1 className="text-2xl font-bold text-white">Aurora</h1>
             </div>
