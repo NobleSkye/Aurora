@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Separator } from "@/components/ui/separator"
+import Link from "next/link"
 
 export default function HomePage() {
   return (
@@ -125,35 +126,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* EULA Section */}
-      <section className="py-16 px-4">
-        <div className="container mx-auto">
-          <Card className="bg-black/40 border-white/10 backdrop-blur-sm">
-            <CardHeader>
-              <CardTitle className="text-white flex items-center gap-2">
-                <Shield className="w-6 h-6 text-red-400" />
-                End User License Agreement (EULA)
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <p className="text-slate-300">By installing Aurora, you agree to the following terms:</p>
-              <div className="bg-red-500/10 border border-red-500/20 rounded-lg p-4">
-                <p className="text-red-200 font-medium">
-                  <strong>Important:</strong> You may NOT share, distribute, or redistribute Aurora in any form, whether
-                  modified or unmodified. If you wish to share Aurora with others, please direct them to the original
-                  source on Modrinth.
-                </p>
-              </div>
-              <ul className="text-slate-300 space-y-2 list-disc list-inside">
-                <li>Aurora is provided "as is" during the early beta phase</li>
-                <li>Use Aurora at your own risk in your Minecraft worlds</li>
-                <li>Report bugs and issues through our official channels</li>
-                <li>Respect the intellectual property rights of the developers</li>
-              </ul>
-            </CardContent>
-          </Card>
-        </div>
-      </section>
+
 
       {/* Footer */}
       <footer className="py-12 px-4 border-t border-white/10">
@@ -179,6 +152,12 @@ export default function HomePage() {
                 GitHub
                 <ExternalLink className="w-4 h-4 ml-2" />
               </a>
+            </Button>
+            <Button variant="ghost" className="text-slate-400 hover:text-white" asChild>
+              <Link href="/eula">
+                <Shield className="w-4 h-4 mr-2" />
+                EULA
+              </Link>
             </Button>
           </div>
           <p className="text-slate-500 text-sm mt-6">Happy building! 🚀</p>
