@@ -54,8 +54,8 @@ export default function EulaPage() {
                 <h3 className="text-red-200 font-bold text-lg mb-3">🚫 Distribution Restrictions</h3>
                 <p className="text-red-200 font-medium">
                   <strong>IMPORTANT:</strong> You may NOT share, distribute, or redistribute Aurora in any form, whether
-                  modified or unmodified. If you wish to share Aurora with others, please direct them to the original
-                  source on Modrinth.
+                  modified or unmodified, except by linking to the original source on Modrinth. Direct file sharing
+                  or hosting of Aurora files is prohibited.
                 </p>
               </div>
 
@@ -65,7 +65,7 @@ export default function EulaPage() {
                   <li>Aurora is provided "as is" during the early beta phase without any warranties, express or implied</li>
                   <li>Use Aurora at your own risk in your Minecraft worlds - always backup your saves before use</li>
                   <li>The developers are not responsible for any damage or loss caused by the use of Aurora</li>
-                  <li>Aurora is for personal use only and may not be used for commercial purposes</li>
+                  <li>Aurora may be used for personal and commercial purposes</li>
                   <li>You may not reverse engineer, decompile, or disassemble Aurora</li>
                   <li>Respect the intellectual property rights of the developers and contributors</li>
                 </ul>
