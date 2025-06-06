@@ -12,16 +12,25 @@
       "static/chunks/11eacf67-4252481561d7c71a.js",
       "static/chunks/954-33f7d028027e62d0.js",
       "static/chunks/main-app-473f733d0fe44fbc.js",
-      "static/css/78a0fd66a676eae7.css",
+      "static/css/b611a8e96ee79431.css",
       "static/chunks/app/layout-8bd8e0de5465bf8b.js"
+    ],
+    "/eula/page": [
+      "static/chunks/webpack-9ce1feb1a7ba3ba5.js",
+      "static/chunks/11eacf67-4252481561d7c71a.js",
+      "static/chunks/954-33f7d028027e62d0.js",
+      "static/chunks/main-app-473f733d0fe44fbc.js",
+      "static/chunks/950-76c1277f8f68eb5f.js",
+      "static/chunks/app/eula/page-d7345bd1fce25597.js"
     ],
     "/page": [
       "static/chunks/webpack-9ce1feb1a7ba3ba5.js",
       "static/chunks/11eacf67-4252481561d7c71a.js",
       "static/chunks/954-33f7d028027e62d0.js",
       "static/chunks/main-app-473f733d0fe44fbc.js",
+      "static/chunks/950-76c1277f8f68eb5f.js",
       "static/chunks/886-417f3939205ed4ac.js",
-      "static/chunks/app/page-8a63dfa9e1175a94.js"
+      "static/chunks/app/page-408529e19d54d48b.js"
     ]
   }
 }

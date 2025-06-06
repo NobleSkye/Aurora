@@ -1,6 +1,30 @@
 {
   "version": 4,
   "routes": {
+    "/eula": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "Next-Action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/eula",
+      "dataRoute": "/eula.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
     "/": {
       "experimentalBypassFor": [
         {
@@ -29,8 +53,8 @@
   "dynamicRoutes": {},
   "notFoundRoutes": [],
   "preview": {
-    "previewModeId": "2ef00ee4e759ee20bf6ca7b6513eb242",
-    "previewModeSigningKey": "fc41e06f6b13102fe1aad08d662751e97432e28433f1d63197eb658badea089d",
-    "previewModeEncryptionKey": "2f8ad831a7354353536e0dbc3c5d6be192154c9d79ed2a4bb174f9a09c70137b"
+    "previewModeId": "fc2f26572cb68605ba39c07e9e7a357a",
+    "previewModeSigningKey": "2afc9ae7151459fdde5c1b91305ce1b3498f5000f9f25ea91edad66020739a14",
+    "previewModeEncryptionKey": "04119ddef619b3ce2ee2ba803ee24f3aa37d20ee68f4aeefbd03a355b4b3447f"
   }
 }
