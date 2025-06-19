@@ -129,7 +129,7 @@ export default function EulaPage() {
           <div className="text-center mt-8">
             <Button
               size="lg"
-              className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white"
+              className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-black"
               asChild
             >
               <Link href="/">
