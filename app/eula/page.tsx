@@ -34,75 +34,93 @@ export default function EulaPage() {
               End User License Agreement
             </h1>
             <p className="text-slate-300 text-lg">
-              Please read these terms carefully before using Aurora
+              Aurora is licensed under the GNU Lesser General Public License v3.0
             </p>
           </div>
 
           <Card className="bg-black/40 border-white/10 backdrop-blur-sm">
             <CardHeader>
               <CardTitle className="text-white flex items-center gap-2">
-                <Shield className="w-6 h-6 text-red-400" />
-                Terms and Conditions
+                <Shield className="w-6 h-6 text-green-400" />
+                GNU LESSER GENERAL PUBLIC LICENSE v3.0
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-6">
-              <p className="text-slate-300 text-lg">
-                By downloading, installing, or using Aurora, you agree to be bound by the following terms and conditions:
-              </p>
-
-              <div className="bg-red-500/10 border border-red-500/20 rounded-lg p-6">
-                <h3 className="text-red-200 font-bold text-lg mb-3">🚫 Distribution Restrictions</h3>
-                <p className="text-red-200 font-medium">
-                  <strong>IMPORTANT:</strong> You may NOT share, distribute, or redistribute Aurora in any form, whether
-                  modified or unmodified, except by linking to the original source on Modrinth. Direct file sharing
-                  or hosting of Aurora files is prohibited.
+              <div className="bg-green-500/10 border border-green-500/20 rounded-lg p-6">
+                <h3 className="text-green-200 font-bold text-lg mb-3">� License Summary</h3>
+                <p className="text-green-200">
+                  Aurora is free software: you can redistribute it and/or modify it under the terms of the 
+                  GNU Lesser General Public License as published by the Free Software Foundation.
                 </p>
               </div>
 
               <div className="space-y-4">
-                <h3 className="text-white font-bold text-xl">License Terms</h3>
+                <h3 className="text-white font-bold text-xl">Your Rights</h3>
                 <ul className="text-slate-300 space-y-3 list-disc list-inside pl-4">
-                  <li>Aurora is provided "as is" during the early beta phase without any warranties, express or implied</li>
-                  <li>Use Aurora at your own risk in your Minecraft worlds - always backup your saves before use</li>
-                  <li>The developers are not responsible for any damage or loss caused by the use of Aurora</li>
-                  <li>Aurora may be used for personal and commercial purposes</li>
-                  <li>You may not reverse engineer, decompile, or disassemble Aurora</li>
-                  <li>Respect the intellectual property rights of the developers and contributors</li>
+                  <li><strong>Use:</strong> You may use Aurora for any purpose, including commercial use</li>
+                  <li><strong>Study:</strong> You may study how Aurora works and adapt it to your needs</li>
+                  <li><strong>Share:</strong> You may redistribute copies of Aurora</li>
+                  <li><strong>Modify:</strong> You may modify Aurora and distribute your modifications</li>
                 </ul>
               </div>
 
               <div className="space-y-4">
-                <h3 className="text-white font-bold text-xl">User Responsibilities</h3>
+                <h3 className="text-white font-bold text-xl">Your Responsibilities</h3>
                 <ul className="text-slate-300 space-y-3 list-disc list-inside pl-4">
-                  <li>Report bugs and issues through our official channels on GitHub or Modrinth</li>
-                  <li>Do not use Aurora to grief or harm other players' experiences</li>
-                  <li>Follow Minecraft's Terms of Service and your server's rules when using Aurora</li>
-                  <li>Keep Aurora updated to the latest version for optimal performance and security</li>
+                  <li>If you distribute Aurora, you must provide the source code or make it available</li>
+                  <li>If you modify Aurora and distribute it, your modifications must also be under LGPL v3</li>
+                  <li>You must include the original copyright notice and license text</li>
+                  <li>Applications using Aurora as a library are not required to be under LGPL</li>
                 </ul>
               </div>
 
               <div className="space-y-4">
-                <h3 className="text-white font-bold text-xl">Beta Software Notice</h3>
+                <h3 className="text-white font-bold text-xl">Disclaimer</h3>
                 <div className="bg-yellow-500/10 border border-yellow-500/20 rounded-lg p-4">
                   <p className="text-yellow-200">
-                    Aurora is currently in early beta. Features may be incomplete, unstable, or subject to change. 
-                    Your feedback and bug reports help us improve the software for everyone.
+                    Aurora is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; 
+                    without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. 
+                    See the GNU Lesser General Public License for more details.
                   </p>
                 </div>
               </div>
 
               <div className="space-y-4">
-                <h3 className="text-white font-bold text-xl">Changes to Terms</h3>
-                <p className="text-slate-300">
-                  We reserve the right to modify these terms at any time. Continued use of Aurora after changes 
-                  constitutes acceptance of the new terms. We will notify users of significant changes through 
-                  our official channels.
+                <h3 className="text-white font-bold text-xl">Beta Software Notice</h3>
+                <div className="bg-blue-500/10 border border-blue-500/20 rounded-lg p-4">
+                  <p className="text-blue-200">
+                    Aurora is currently in early beta. Features may be incomplete or subject to change. 
+                    Please backup your Minecraft worlds before use and report issues on our GitHub repository.
+                  </p>
+                </div>
+              </div>
+
+              <div className="bg-slate-700/30 rounded-lg p-4 text-sm font-mono">
+                <p className="text-slate-300 mb-2">
+                  <strong>Copyright (C) 2025 Aurora Contributors</strong>
                 </p>
+                <p className="text-slate-400">
+                  This program is free software: you can redistribute it and/or modify it under the terms of the 
+                  GNU Lesser General Public License as published by the Free Software Foundation, either version 3 
+                  of the License, or (at your option) any later version.
+                </p>
+              </div>
+
+              <div className="text-center">
+                <Button variant="outline" className="border-white/20 text-white hover:bg-white/10" asChild>
+                  <a 
+                    href="https://www.gnu.org/licenses/lgpl-3.0.html" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                  >
+                    Read Full LGPL v3.0 License
+                  </a>
+                </Button>
               </div>
 
               <div className="pt-6 border-t border-white/10">
                 <p className="text-slate-400 text-sm">
-                  Last updated: June 5, 2025
+                  Last updated: June 19, 2025
                 </p>
               </div>
             </CardContent>
