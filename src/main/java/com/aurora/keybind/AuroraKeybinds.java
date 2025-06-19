@@ -35,7 +35,7 @@ public class AuroraKeybinds {
         tinkerKey = KeyBindingHelper.registerKeyBinding(new KeyBinding(
             "key.aurora.tinker",
             InputUtil.Type.KEYSYM,
-            GLFW.GLFW_KEY_T,
+            GLFW.GLFW_KEY_L,
             "category.aurora"
         ));
     }
