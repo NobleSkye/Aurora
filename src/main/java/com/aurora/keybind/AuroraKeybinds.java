@@ -1,64 +1,38 @@
 package com.aurora.keybind;
 
 import com.aurora.AuroraMod;
-import com.aurora.features.ReplaceFeature;
-import com.aurora.features.TinkerFeature;
-import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
-import net.minecraft.client.option.KeyBinding;
-import net.minecraft.client.util.InputUtil;
+import net.minecraft.client.MinecraftClient;
 import org.lwjgl.glfw.GLFW;
 
 public class AuroraKeybinds {
-    private KeyBinding menuKey;
-    private KeyBinding replaceKey;
-    private KeyBinding tinkerKey;
+    private final MinecraftClient client = MinecraftClient.getInstance();
+    private boolean leftAltPressed = false;
+    private boolean wasLeftAltPressed = false;
     
     public AuroraKeybinds() {
-        registerKeybinds();
-    }
-    
-    private void registerKeybinds() {
-        menuKey = KeyBindingHelper.registerKeyBinding(new KeyBinding(
-            "key.aurora.menu",
-            InputUtil.Type.KEYSYM,
-            GLFW.GLFW_KEY_M,
-            "category.aurora"
-        ));
-        
-        replaceKey = KeyBindingHelper.registerKeyBinding(new KeyBinding(
-            "key.aurora.replace",
-            InputUtil.Type.KEYSYM,
-            GLFW.GLFW_KEY_R,
-            "category.aurora"
-        ));
-        
-        tinkerKey = KeyBindingHelper.registerKeyBinding(new KeyBinding(
-            "key.aurora.tinker",
-            InputUtil.Type.KEYSYM,
-            GLFW.GLFW_KEY_L,
-            "category.aurora"
-        ));
+        // No keybinds to register - we handle Left Alt directly
     }
     
     public void handleInput() {
-        if (menuKey.wasPressed()) {
-            AuroraMod.getInstance().getGui().toggleMenu();
+        // Check if Left Alt is currently pressed
+        boolean currentLeftAltState = isLeftAltPressed();
+        
+        // Update GUI based on Left Alt state
+        if (currentLeftAltState != wasLeftAltPressed) {
+            AuroraMod.getInstance().getGui().setToolbarVisible(currentLeftAltState);
+            wasLeftAltPressed = currentLeftAltState;
         }
         
-        if (replaceKey.wasPressed()) {
-            ReplaceFeature replace = AuroraMod.getInstance()
-                .getFeatureManager().getFeature(ReplaceFeature.class);
-            if (replace != null) {
-                replace.toggle();
-            }
-        }
-        
-        if (tinkerKey.wasPressed()) {
-            TinkerFeature tinker = AuroraMod.getInstance()
-                .getFeatureManager().getFeature(TinkerFeature.class);
-            if (tinker != null) {
-                tinker.toggle();
-            }
-        }
+        leftAltPressed = currentLeftAltState;
+    }
+    
+    private boolean isLeftAltPressed() {
+        if (client.getWindow() == null) return false;
+        long windowHandle = client.getWindow().getHandle();
+        return GLFW.glfwGetKey(windowHandle, GLFW.GLFW_KEY_LEFT_ALT) == GLFW.GLFW_PRESS;
+    }
+    
+    public boolean isLeftAltHeld() {
+        return leftAltPressed;
     }
 }

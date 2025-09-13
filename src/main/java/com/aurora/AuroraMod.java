@@ -6,6 +6,9 @@ import com.aurora.gui.AuroraGui;
 import com.aurora.keybind.AuroraKeybinds;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
+import net.fabricmc.fabric.api.client.screen.v1.ScreenMouseEvents;
+import net.minecraft.client.MinecraftClient;
+import net.minecraft.client.gui.screen.Screen;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -37,6 +40,14 @@ public class AuroraMod implements ClientModInitializer {
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             featureManager.tick();
             keybinds.handleInput();
+        });
+        
+        // Register global mouse click handler for toolbar
+        ScreenMouseEvents.allowMouseClick(Screen.class).register((screen, mouseX, mouseY, button) -> {
+            if (screen == null && button == 0) { // Left click in-game (not in a GUI)
+                return !gui.handleClick(mouseX, mouseY); // Return false if click was handled by toolbar
+            }
+            return true;
         });
         
         System.out.println("=== AURORA MOD INITIALIZED ===");
