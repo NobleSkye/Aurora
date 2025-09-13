@@ -14,7 +14,8 @@
     "TinkerMixin",
     "ClientWorldMixin",
     "FreezeUpdatesMixin",
-    "MinecraftClientMixin"
+    "MinecraftClientMixin",
+    "MouseMixin"
   ],
   "injectors": {
     "defaultRequire": 1

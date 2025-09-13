@@ -1,6 +1,5 @@
 {
-  "key.aurora.menu": "Aurora Menu",
-  "key.aurora.replace": "Replace Block",
-  "key.aurora.tinker": "Tinker Block",
+  "key.aurora.replace": "Replace Block (Legacy)",
+  "key.aurora.tinker": "Tinker Block (Legacy)",
   "category.aurora": "Aurora"
 }

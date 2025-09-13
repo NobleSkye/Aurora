@@ -9,7 +9,7 @@ import net.minecraft.client.util.InputUtil;
 import org.lwjgl.glfw.GLFW;
 
 public class AuroraKeybinds {
-    private KeyBinding menuKey;
+    // Keep some legacy keybinds for backwards compatibility
     private KeyBinding replaceKey;
     private KeyBinding tinkerKey;
     
@@ -18,13 +18,7 @@ public class AuroraKeybinds {
     }
     
     private void registerKeybinds() {
-        menuKey = KeyBindingHelper.registerKeyBinding(new KeyBinding(
-            "key.aurora.menu",
-            InputUtil.Type.KEYSYM,
-            GLFW.GLFW_KEY_M,
-            "category.aurora"
-        ));
-        
+        // Legacy keybinds for direct feature access (optional)
         replaceKey = KeyBindingHelper.registerKeyBinding(new KeyBinding(
             "key.aurora.replace",
             InputUtil.Type.KEYSYM,
@@ -41,10 +35,7 @@ public class AuroraKeybinds {
     }
     
     public void handleInput() {
-        if (menuKey.wasPressed()) {
-            AuroraMod.getInstance().getGui().toggleMenu();
-        }
-        
+        // Handle legacy keybinds
         if (replaceKey.wasPressed()) {
             ReplaceFeature replace = AuroraMod.getInstance()
                 .getFeatureManager().getFeature(ReplaceFeature.class);

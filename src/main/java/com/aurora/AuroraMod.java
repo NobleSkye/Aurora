@@ -2,10 +2,11 @@ package com.aurora;
 
 import com.aurora.command.AuroraCommands;
 import com.aurora.features.FeatureManager;
-import com.aurora.gui.AuroraGui;
+import com.aurora.gui.AuroraToolbar;
 import com.aurora.keybind.AuroraKeybinds;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
+import net.fabricmc.fabric.api.client.rendering.v1.HudRenderCallback;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -16,7 +17,7 @@ public class AuroraMod implements ClientModInitializer {
     
     private static AuroraMod instance;
     private FeatureManager featureManager;
-    private AuroraGui gui;
+    private AuroraToolbar toolbar;
     private AuroraKeybinds keybinds;
     
     @Override
@@ -27,15 +28,21 @@ public class AuroraMod implements ClientModInitializer {
         
         // Initialize core systems
         this.featureManager = new FeatureManager();
-        this.gui = new AuroraGui();
+        this.toolbar = new AuroraToolbar();
         this.keybinds = new AuroraKeybinds();
         
         // Register commands
         AuroraCommands.register();
         
+        // Register HUD rendering
+        HudRenderCallback.EVENT.register((context, tickCounter) -> {
+            toolbar.render(context, 1.0f);
+        });
+        
         // Register tick events
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             featureManager.tick();
+            toolbar.tick();
             keybinds.handleInput();
         });
         
@@ -51,8 +58,8 @@ public class AuroraMod implements ClientModInitializer {
         return featureManager;
     }
     
-    public AuroraGui getGui() {
-        return gui;
+    public AuroraToolbar getToolbar() {
+        return toolbar;
     }
     
     public AuroraKeybinds getKeybinds() {
