@@ -4,17 +4,20 @@
   "package": "com.aurora.mixin",
   "compatibilityLevel": "JAVA_21",
   "client": [
-    "FastBreakMixin",
-    "FastPlaceMixin",
-    "FastPlaceClientMixin",
-    "ForcePlaceMixin",
     "ClientPlayerEntityMixin",
-    "EntityMixin",
-    "ReplaceMixin",
-    "TinkerMixin",
     "ClientWorldMixin",
+    "EntityMixin",
+    "FastBreakMixin",
+    "FastPlaceClientMixin",
+    "FastPlaceInteractionMixin",
+    "FastPlaceMixin",
+    "ForcePlaceMixin",
     "FreezeUpdatesMixin",
-    "MinecraftClientMixin"
+    "GameRendererMixin",
+    "LivingEntityMixin",
+    "MinecraftClientMixin",
+    "ReplaceMixin",
+    "TinkerMixin"
   ],
   "injectors": {
     "defaultRequire": 1

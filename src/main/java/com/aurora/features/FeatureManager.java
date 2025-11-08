@@ -16,12 +16,21 @@ public class FeatureManager {
     }
     
     private void registerFeatures() {
+        // Movement & Navigation
         registerFeature(new NoClipFeature());
+        registerFeature(new ExtendedReachFeature());
+        registerFeature(new FlySpeedFeature());
+        registerFeature(new NoFallDamageFeature());
+        
+        // Building Tools
         registerFeature(new FastPlaceFeature());
         registerFeature(new FastBreakFeature());
         registerFeature(new ForcePlaceFeature());
         registerFeature(new ReplaceFeature());
         registerFeature(new TinkerFeature());
+        
+        // Utilities
+        registerFeature(new FullBrightFeature());
         registerFeature(new FreezeUpdatesFeature());
     }
     
